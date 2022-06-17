@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import Info from './component/info';
 import Form from './component/form';
 import Weather from './component/weather';
@@ -50,18 +50,22 @@ export default class App extends Component {
 	}
 	render() {
 		return (
-			<div>
-				<Info />
-				<Form weatherMethod={this.getWeather}/>
-				<Weather
-					temp={this.state.temp}
-					pressure={this.state.pressure}
-					city={this.state.city}
-					country={this.state.country}
-					sunrise={this.state.sunrise}
-					sunset={this.state.sunset}
-					error={this.state.error}
-				/>
+			<div className="app-block container-fluid d-flex justify-content-center align-items-center">
+				<div className="row">
+					<div className="col">
+						<Info />
+						<Form weatherMethod={this.getWeather}/>
+						<Weather
+							temp={this.state.temp}
+							pressure={this.state.pressure}
+							city={this.state.city}
+							country={this.state.country}
+							sunrise={this.state.sunrise}
+							sunset={this.state.sunset}
+							error={this.state.error}
+						/>
+					</div>
+				</div>
 			</div>
 		);
 	}

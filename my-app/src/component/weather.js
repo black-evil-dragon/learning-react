@@ -4,7 +4,7 @@ const Weather = (props) => {
     return (
         <div>
             {props.city && (
-                <div>
+                <div className=''>
                     <p>
                         {props.city}, {props.country}
                     </p>
