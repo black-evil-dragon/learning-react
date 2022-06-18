@@ -6,7 +6,7 @@ export default class form extends Component {
             <div>
                 <form onSubmit={this.props.weatherMethod}>
                     <input type="text" name="city" placeholder="Город"></input>
-                    <button>Получить погоду</button>
+                    <button>🔎</button>
                 </form>
             </div>
         );

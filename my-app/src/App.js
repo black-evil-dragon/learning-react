@@ -1,5 +1,5 @@
 import './css/App.css';
-import Info from './component/info';
+import Header from './component/header';
 import Form from './component/form';
 import Weather from './component/weather';
 import React, { Component } from 'react';
@@ -50,20 +50,26 @@ export default class App extends Component {
 	}
 	render() {
 		return (
-			<div className="app-block container-fluid d-flex justify-content-center align-items-center">
+			<div className="container-fluid d-flex justify-content-center align-items-center bg-body">
 				<div className="row">
-					<div className="col">
-						<Info />
-						<Form weatherMethod={this.getWeather}/>
-						<Weather
-							temp={this.state.temp}
-							pressure={this.state.pressure}
-							city={this.state.city}
-							country={this.state.country}
-							sunrise={this.state.sunrise}
-							sunset={this.state.sunset}
-							error={this.state.error}
-						/>
+					<div className="col app-block">
+						<div className="app-title">
+							<Header />
+						</div>
+						<div className="app-input">
+							<Form weatherMethod={this.getWeather}/>
+						</div>
+						<div className="app-info">
+							<Weather
+								temp={this.state.temp}
+								pressure={this.state.pressure}
+								city={this.state.city}
+								country={this.state.country}
+								sunrise={this.state.sunrise}
+								sunset={this.state.sunset}
+								error={this.state.error}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

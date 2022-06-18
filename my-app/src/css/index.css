@@ -3,9 +3,11 @@ body, html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 #root, #root>div {
   height: 100%;
+  background-color: #DFDFDE !important
 }
 
 code {
