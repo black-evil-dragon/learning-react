@@ -1,7 +1,7 @@
-import './css/App.css';
-import Header from './component/header';
-import Form from './component/form';
-import Weather from './component/weather';
+import './scss/main.scss';
+import Header from './components/header';
+import Form from './components/form';
+import Weather from './components/weather';
 import React, { Component } from 'react';
 import config from './config.json'
 
