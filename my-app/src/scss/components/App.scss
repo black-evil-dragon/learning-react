@@ -1,8 +1,42 @@
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.app-block {
+/*  App block   */
+.row {
     background-color: #fff;
+
+
+    width: 45%;
+    padding: 5%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    .app-block {
+        padding: 0;
+    }
 }
 
+
+
+/*  Header block    */
+.info-title {
+    margin: 0 5% 5%;
+}
+
+
+
+/*  Form block  */
+.app-form {
+    form {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+/*  Weather block   */
+
+.app-info {
+    margin-top: 10%;
+}

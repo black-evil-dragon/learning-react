@@ -15,7 +15,7 @@ export default class App extends Component {
 		sunrise: undefined,
 		sunset: undefined,
 		pressure: undefined,
-		error: '0'
+		response: undefined
 	}
 	getWeather = async (event) => {
 		event.preventDefault();
@@ -44,8 +44,16 @@ export default class App extends Component {
 				sunrise: sunrise_time,
 				sunset: sunset_time,
 				pressure: result.main.pressure,
-				error: '0'
+				response: undefined
 			});
+
+			/* Крым наш */
+
+			if(this.state.country === 'UA' || this.state.country === 'RU'){
+				this.setState ({
+					country: 'RU'
+				})
+			}
 		};
 	}
 	render() {
@@ -67,7 +75,7 @@ export default class App extends Component {
 								country={this.state.country}
 								sunrise={this.state.sunrise}
 								sunset={this.state.sunset}
-								error={this.state.error}
+								response={this.state.response}
 							/>
 						</div>
 					</div>
