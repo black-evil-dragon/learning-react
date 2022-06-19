@@ -47,7 +47,7 @@ export default class App extends Component {
 				response: undefined
 			});
 
-			/* Крым наш */
+			/* Крым наш. К другим городам претензий нет, лень прописывать исключительно для Крыма */
 
 			if(this.state.country === 'UA' || this.state.country === 'RU'){
 				this.setState ({
@@ -59,7 +59,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="container-fluid d-flex justify-content-center align-items-center bg-body">
-				<div className="row">
+				<div className="row main-block">
 					<div className="col app-block">
 						<div className="app-title">
 							<Header />

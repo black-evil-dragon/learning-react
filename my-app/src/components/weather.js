@@ -6,7 +6,7 @@ const Weather = (props) => {
             {props.city && (
                 <div className='weather-info text-center'>
                     <p>
-                        {props.city}, {props.country === 'UA' || props.country === 'RU'? 'RU' : null}
+                        {props.city}, {props.country === 'UA' || props.country === 'RU'? 'RU' : props.country}
                     </p>
                     <p>{props.temp}</p>
                     <p>{props.pressure}</p>
